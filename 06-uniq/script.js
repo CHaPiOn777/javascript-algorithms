@@ -6,9 +6,27 @@
  * в переданном массиве. То есть, дубликаты должны быть удалены.
  * 
 */
-
+// function uniq(arr) {
+//     let newArr = []
+//     arr.reduce((a, b) => {
+//         if (!a[b]) {
+//             newArr.push(b);
+//             a[b] = 1;
+//         }
+//         return a;
+//     }, {})
+//     return newArr
+// }
 function uniq(arr) {
-    // Напишите код здесь
+    const newArr = [];
+    arr.reduce((a, b) => {
+        if (!a[b]) {
+            newArr.push(b);
+            a[b] = 1;
+        }
+        return a;
+    }, {});
+    return newArr
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

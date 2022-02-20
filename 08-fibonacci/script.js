@@ -9,9 +9,18 @@
 */
 
 function fibonacci(n) {
+    let summ = 0;
+    let first = 0;
+    let twice = 1;
+    for (let j = 1; j < n; j++) {
+        summ = first + twice;
+        first = twice;
+        twice = summ;
+    }
+    return first
     // Напишите код здесь
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
-console.log(fibonacci(4)); // 2. Четвёртое число последовательности — двойка (0, 1, 1, 2)
+console.log(fibonacci(0)); // 2. Четвёртое число последовательности — двойка (0, 1, 1, 2)

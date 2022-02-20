@@ -7,6 +7,17 @@
 */
 
 function countZeros(n) {
+    let k = 0;
+    for (let i = 1; i <= n; i++) {
+        const arr = String(i).split('');
+        arr.forEach(el => {
+            if (el == 0) {
+                k += 1;
+            }
+            return k;
+        })
+    }
+    return k;
     // Напишите код здесь
 }
 

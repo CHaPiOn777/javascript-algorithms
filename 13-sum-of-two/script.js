@@ -9,6 +9,20 @@
 */
 
 function sumOfTwo(arr, sum) {
+    arr.sort((a, b) => {
+        return a - b;
+    })
+
+    let flag = false;
+
+    arr.forEach(el => {
+        arr.forEach(el1 => {
+            if (el + el1 === sum) {
+                flag = true
+            } return flag
+        });
+    });
+    return flag;
     // Напишите код здесь
 }
 

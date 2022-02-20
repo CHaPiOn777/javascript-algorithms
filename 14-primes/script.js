@@ -7,6 +7,22 @@
 */
 
 function primes(num) {
+    const arr = [];
+
+    for (let i = 2; i <= num; i++) {
+        let k = 1;
+
+        for (let j = i; j > 1; j--) {
+            if (i % j === 0) {
+                k += 1;
+            }
+        }
+
+        if (k === 2) {
+            arr.push(i);
+        }
+    }
+    return arr;
     // Напишите код здесь
 }
 

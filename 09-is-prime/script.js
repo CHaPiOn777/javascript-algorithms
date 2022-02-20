@@ -10,13 +10,24 @@
 */
 
 function isPrime(n) {
+    let flag = false;
+    let k = 0;
+    for (let i = n; i > 0; i--) {
+        if (n % i == 0) {
+            k += 1;
+        }
+    }
+    if (k === 2 ) {
+        flag = true;
+    }
+    return flag
     // Напишите код здесь
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
 console.log(isPrime(0)); // false
-console.log(isPrime(1)); // false
+console.log(isPrime(2)); // false
 console.log(isPrime(3)); // true
 console.log(isPrime(6)); // false
 console.log(isPrime(17)); // true

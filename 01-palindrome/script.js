@@ -14,6 +14,23 @@
 */
 
 function palindrome(str) {
+    
+    str = str.replace(/[^А-Яа-яЁёa-zA-Z]/ig, "");
+
+    str = str.toLowerCase().split('');
+    let k = [];
+    
+    for (let i = str.length - 1; i >= 0; i--) {
+        k.push(str[i])
+    }
+    k = k.join('');
+    str = str.join('');
+
+    if (str === k) {
+        return true;
+    } else {
+        return false;
+    }
     // Напишите код здесь
 }
 
@@ -22,6 +39,7 @@ function palindrome(str) {
 console.log(palindrome('топот')); // должно быть true
 console.log(palindrome('Saippuakivikauppias')); // true
 console.log(palindrome('привет')); // false
+console.log(palindrome('О, % $ % лета тело!')); // true
 
 /*
  * Бонус. Задача для любознательных. Пусть функция принимает на вход любую строку,
